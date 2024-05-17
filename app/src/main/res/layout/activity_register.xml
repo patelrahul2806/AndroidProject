@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#8394F1"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp"
+            android:layout_margin="32dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/register_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Create Account"
+                    android:textSize="34sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/register_text"
+                    android:layout_marginTop="24dp"
+                    android:hint="Enter your email"
+                    android:inputType="textEmailAddress" />
+
+                <EditText
+                    android:id="@+id/SignupPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/editTextEmail"
+                    android:layout_marginTop="16dp"
+                    android:hint="Enter your password"
+                    android:inputType="textPassword" />
+
+                <Button
+                    android:id="@+id/register_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/SignupPassword"
+                    android:layout_marginTop="24dp"
+                    android:backgroundTint="#006699"
+                    android:text="Register"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/loginbutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/register_btn"
+                    android:layout_marginTop="16dp"
+                    android:text="Already have an account? Login"
+                    android:textSize="18sp"
+                    android:background="?attr/selectableItemBackground"
+                    android:textColor="#006699" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</RelativeLayout>
